@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/main.min.css' %}"/>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <title>HTMX Django</title>
+</head>
+<body class="h-screen flex flex-col">
+<header class="bg-blue-800 text-white body-font">
+    <div class="container mx-auto flex p-5 items-center">
+        <h1 class="text-xl">
+            <a href="/">HTMX Django</a>
+        </h1>
+    </div>
+</header>
+<div class="container mx-auto p-5 grow space-y-4">
+  {% block content %}{% endblock %}
+</div>
+<footer class="bg-slate-800 text-white body-font">
+  <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+    <p class="text-white text-sm text-center sm:text-left">
+      © 2024 HTMX Django - <a href="https://accentdesign.co.uk" class="text-gray-400 ml-1" target="_blank">Accent Design Group Ltd</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

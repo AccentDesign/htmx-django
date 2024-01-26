@@ -1,0 +1,8 @@
+{% spaceless %}
+<ul>
+  <li class="font-medium mb-4">Posts</li>
+  {% for post in posts %}
+  <li><a class="text-blue-800" href="{% url 'posts:post' slug=post.slug %}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endspaceless %}

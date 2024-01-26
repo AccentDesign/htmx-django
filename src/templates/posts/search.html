@@ -1,0 +1,5 @@
+<div class="post-search bg-slate-50 p-4 border rounded">
+  <label for="post-search" class="font-medium mb-4 block">Post Search</label>
+  <input class="p-2 border rounded w-full" type="search" id="post-search" name="search" placeholder="Begin typing to search Posts..." hx-get="{% url 'posts:search' %}" hx-trigger="input changed delay:500ms, search" hx-target="#post-search-result">
+  <div id="post-search-result"></div>
+</div>

@@ -1,0 +1,6 @@
+<div class="px-1 whitespace-nowrap">Delete this file?</div>
+<form method="post" hx-post="{% url 'files:file-action-delete' pk=file.pk %}">
+  {% csrf_token %}
+  <input class="bg-red-800 text-white rounded p-1" type="submit" name="confirm" value="Confirm">
+</form>
+<button class="bg-white rounded p-1" hx-get="{% url 'files:file-actions' pk=file.pk %}">Cancel</button>

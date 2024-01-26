@@ -1,0 +1,7 @@
+{% spaceless %}
+<form class="flex gap-4 items-end" hx-post="{% url 'files:file-upload' %}" hx-encoding="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button class="p-3 bg-sky-600 text-white rounded">Upload</button>
+</form>
+{% endspaceless %}

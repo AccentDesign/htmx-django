@@ -1,0 +1,10 @@
+{# tailwind hidden classes: errorlist #}
+{% spaceless %}
+<form class="space-y-4" hx-post="{% url 'inquiries:form' %}" hx-target="this" hx-swap="outerHTML">
+  <div class="text-xl">Inquiry Form</div>
+  <p>We cant wait to hear from you</p>
+  {% csrf_token %}
+  {{ form }}
+  <button class="p-2 bg-sky-600 text-white rounded">Submit</button>
+</form>
+{% endspaceless %}

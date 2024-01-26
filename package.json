@@ -1,0 +1,13 @@
+{
+  "name": "htmx-go",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "css": "npx tailwindcss -i ./src/static/css/main.css -o ./src/static/css/main.min.css --watch --minify"
+  }
+}

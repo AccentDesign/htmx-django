@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bg-slate-50 mb-4 p-4 border rounded">
+  <div class="text-xl mb-4">{{ post.title }}</div>
+  <p class="text-gray-600">{{ post.description }}</p>
+</div>
+<div class="bg-slate-50 mb-4 p-4 border rounded space-y-4">{{ post.content|safe }}</div>
+{% include "posts/latest.html" %}
+{% endblock %}

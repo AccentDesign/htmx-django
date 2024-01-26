@@ -1,0 +1,4 @@
+<div class="file-upload-action flex items-center gap-4">
+  <button class="p-2 bg-slate-200 rounded" hx-get="{% url 'files:file-upload' %}" hx-target="closest .file-upload-action" hx-swap="outerHTML">Upload another file</button>
+  <p class="text-green-800">Uploaded successfully.</p>
+</div>

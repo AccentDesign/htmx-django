@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [type=text],
+  [type=email],
+  [type=number],
+  textarea {
+    @apply p-2 border rounded w-full;
+  }
+  label {
+    @apply block;
+  }
+}
+
+@layer components {
+  .errorlist li {
+    @apply text-sm text-red-800;
+  }
+}

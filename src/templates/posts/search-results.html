@@ -1,0 +1,13 @@
+{% spaceless %}
+<ul class="mt-4">
+  <li class="font-medium mb-4">Search Results</li>
+  {% for post in posts %}
+  <li class="mb-4">
+    <a class="text-blue-800" href="{% url 'posts:post' slug=post.slug %}">{{ post.title }}</a>
+    <p class="text-slate-500">{{ post.description }}</p>
+  </li>
+  {% empty %}
+  <li class="text-slate-500">No posts have been found please try changing your search.</li>
+  {% endfor %}
+</ul>
+{% endspaceless %}
