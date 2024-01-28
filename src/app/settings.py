@@ -33,7 +33,6 @@ INSTALLED_APPS = [
 APPEND_SLASH = False
 REMOVE_SLASH = True
 MIDDLEWARE = [
-    "django.middleware.gzip.GZipMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -66,7 +65,7 @@ TEMPLATES = [
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "django.db.backends.postgresql",
         "HOST": environ.get("RDS_HOSTNAME"),
         "PORT": environ.get("RDS_PORT"),
         "NAME": environ.get("RDS_DB_NAME"),
