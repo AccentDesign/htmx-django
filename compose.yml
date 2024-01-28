@@ -24,8 +24,7 @@ services:
       context: .
       args:
         ENVIRONMENT: dev
-    environment:
-    - DJANGO_MANAGEPY_COLLECTSTATIC=off
+    env_file: .env.local
     volumes:
     - ./src:/app
     depends_on:

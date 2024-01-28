@@ -86,12 +86,26 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static
+# Storage
 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-STATICFILES_LOCATION = "static"
-STATICFILES_DIRS = [join(BASE_DIR, "static")]
-STATIC_ROOT = join(BASE_DIR, "public/static")
-STATIC_URL = "/static/"
 MEDIA_ROOT = join(BASE_DIR, "public/media")
 MEDIA_URL = "/media/"
+
+STATIC_ROOT = join(BASE_DIR, "public/static")
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [join(BASE_DIR, "static")]
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
+
+# if not debug use S3 storage backend
+if not DEBUG:
+    from app.storages import S3_STORAGES
+
+    STORAGES.update(S3_STORAGES)
