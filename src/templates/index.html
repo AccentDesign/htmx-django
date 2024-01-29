@@ -1,7 +1,4 @@
 {% extends 'base.html' %}
 {% block content %}
-{% include "posts/latest.html" %}
-{% include "posts/search.html" %}
-{% include "files/file-list.html" %}
-{% include "inquiries/inquiry-start.html" %}
-{% endblock %}
+<div hx-get="{% url 'tabs' slug='tab1' %}" hx-trigger="load delay:100ms" hx-target="this"></div>
+{% endblock content %}

@@ -1,6 +1,6 @@
 <div class="bg-slate-50 p-4 border rounded space-y-4">
-  <div class="file-list" hx-get="{% url 'files:file-list-results' %}" hx-trigger="fileList from:body, load"></div>
-  <div class="file-upload-action flex items-center gap-4">
-    <button class="p-2 bg-slate-200 rounded" hx-get="{% url 'files:file-upload' %}" hx-target="closest .file-upload-action" hx-swap="outerHTML">Upload a file</button>
+  <div class="file-list" hx-get="{% url 'files:file-list-results' %}" hx-target="this" hx-trigger="fileList from:body, load"></div>
+  <div class="flex items-center gap-4" hx-target="this">
+    <button class="p-2 bg-slate-200 rounded" hx-get="{% url 'files:file-upload' %}">Upload a file</button>
   </div>
 </div>

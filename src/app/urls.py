@@ -10,6 +10,7 @@ urlpatterns = [
     path("files/", include("files.urls", namespace="files")),
     path("inquiries/", include("inquiries.urls", namespace="inquiries")),
     path("posts/", include("posts.urls", namespace="posts")),
+    path("tabs/<slug:slug>", views.tab_content, name="tabs"),
     path("", views.index, name="index"),
 ]
 
