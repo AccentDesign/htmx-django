@@ -6,6 +6,13 @@ Some basic examples using htmx in django:
 * file list with upload and actions
 * contact form
 
+## Env vars
+
+Copy `.env` to `.env.local` and edit accordingly.
+```bash
+cp .env .env.local
+```
+
 ## Running
 
 Using docker compose:
