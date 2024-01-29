@@ -6,7 +6,7 @@ services:
     environment:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=password
-    - POSTGRES_DB=postgres
+    - POSTGRES_DB=appdb
     - POSTGRES_INITDB_ARGS=--auth-host=md5
     - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:

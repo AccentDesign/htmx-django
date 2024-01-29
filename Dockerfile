@@ -25,7 +25,7 @@ ENV         ALLOWED_HOSTS=*
 ENV         CSRF_TRUSTED_ORIGINS=http://*
 ENV         RDS_HOSTNAME=db
 ENV         RDS_PORT=5432
-ENV         RDS_DB_NAME=postgres
+ENV         RDS_DB_NAME=appdb
 ENV         RDS_USERNAME=postgres
 ENV         RDS_PASSWORD=password
 
