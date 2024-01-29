@@ -2,6 +2,7 @@
 
 Some basic examples using htmx in django:
 
+* tabs
 * search form
 * file list with upload and actions
 * contact form
