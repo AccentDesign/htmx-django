@@ -7,7 +7,7 @@ BASE_DIR = dirname(dirname(abspath(__file__)))
 # Security
 
 SECRET_KEY = environ.get("SECRET_KEY")
-DEBUG = True
+DEBUG = environ.get("DEBUG") in ("true", "True", "t", "1")
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS += environ.get("ALLOWED_HOSTS", "").split(",")
 CSRF_TRUSTED_ORIGINS = []
@@ -108,4 +108,4 @@ STORAGES = {
 if not DEBUG:
     from app.storages import S3_STORAGES
 
-    STORAGES.update(S3_STORAGES)
+    STORAGES |= S3_STORAGES
