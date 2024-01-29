@@ -1,7 +1,11 @@
 {% spaceless %}
 <div class="mb-4" role="tablist">
   {% for tab in tabs %}
-	<button hx-get="{% url 'tabs' slug=tab.slug %}" class="p-2 rounded{% if tab.selected %} border bg-slate-100{% endif %}" role="tab" aria-controls="tab-content" aria-selected="false">{{ tab.title }}</button>
+  {% if tab.selected %}
+	<button hx-get="{% url 'tabs' slug=tab.slug %}" class="p-2 rounded border bg-slate-100" role="tab" aria-controls="tab-content" aria-selected="true">{{ tab.title }}</button>
+  {% else %}
+  <button hx-get="{% url 'tabs' slug=tab.slug %}" class="p-2 rounded" role="tab" aria-controls="tab-content" aria-selected="false">{{ tab.title }}</button>
+  {% endif %}
   {% endfor %}
 </div>
 {% endspaceless %}
