@@ -6,6 +6,7 @@ Some basic examples using htmx in django:
 * search form
 * file list with upload and actions
 * contact form
+* infinite scroll
 
 ## Env vars
 

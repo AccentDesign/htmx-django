@@ -1,0 +1,12 @@
+<div class="bg-slate-50 p-4 border rounded space-y-4">
+  <table class="w-full">
+    <thead>
+    <tr>
+      <th class="text-left py-2">Row</th>
+      <th class="text-left py-2">Name</th>
+      <th class="text-left py-2">Email</th>
+    </tr>
+    </thead>
+    <tbody hx-get="{% url 'infinite-items' page=1 %}" hx-target="this" hx-trigger="load"></tbody>
+  </table>
+</div>

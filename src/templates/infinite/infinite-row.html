@@ -1,0 +1,9 @@
+{% spaceless %}
+{% for r in data %}
+<tr class="text-sm border-t" {% if forloop.last %} hx-get="{% url 'infinite-items' page=next %}" hx-target="this" hx-trigger="revealed" hx-swap="afterend"{% endif %}>
+  <td class="py-2">{{ r.row }}</td>
+  <td class="py-2">{{ r.name }}</td>
+  <td class="py-2">{{ r.email }}</td>
+</tr>
+{% endfor %}
+{% endspaceless %}
